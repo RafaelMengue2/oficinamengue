@@ -1,0 +1,11 @@
+<!-- editcar.html -->
+{% extends 'home.html' %}
+
+{% block content %}
+  <h2>Editar Carro</h2>
+  <form method="post" action="{% url 'editcar' car.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar Alterações</button>
+  </form>
+{% endblock %}

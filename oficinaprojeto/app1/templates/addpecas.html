@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Adicionar Peças</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <style media="screen">
+    body {
+      background-color: #00041b;
+      margin: 0;
+      padding: 0;
+    }
+
+    .background {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .background .shape {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      animation: float 10s infinite alternate;
+    }
+
+    @keyframes float {
+      to {
+        transform: translateY(-50px) translateX(-10px);
+      }
+    }
+
+    .shape:nth-child(1) {
+      background: linear-gradient(#1845ad, #23a2f6);
+    }
+
+    .shape:nth-child(2) {
+      background: linear-gradient(to right, #ff512f, #f09819);
+    }
+
+    .shape:nth-child(3) {
+      background: linear-gradient(#1845ad, #23a2f6);
+    }
+
+    .shape:nth-child(4) {
+      background: linear-gradient(to right, #ff512f, #f09819);
+    }
+
+    .shape:nth-child(5) {
+      background: linear-gradient(#1845ad, #23a2f6);
+    }
+
+    .shape:nth-child(6) {
+      background: linear-gradient(to right, #ff512f, #f09819);
+    }
+
+    .nav-side {
+      background-color: rgba(255, 255, 255, 0.12999999523162842);
+      height: 95%;
+      width: 250px;
+      border-radius: 10px;
+      border: 1px solid #ffffff;
+      backdrop-filter: blur(30px);
+      position: fixed;
+      top: 0; /* Added top position */
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+  }
+
+  .menudaoficina {
+    color: #ffffff;
+    text-align: center;
+    vertical-align: text-top;
+    font-size: 40px;
+    font-family: Poppins;
+    top: 55px;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    line-height: 40px;
+    border-style: hidden;
+    outline: none;
+  }
+
+  .veiculos,
+  .pecas,
+  .servico,
+  .clientes,
+  .mecanicos,
+  .os {
+    background-color: #23a2f6;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    font-family: Poppins;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    line-height: 45px; /* Adjusted to center text vertically */
+    border-style: hidden;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .veiculos {
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
+  .pecas {
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+  .servico {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .clientes {
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+  .mecanicos {
+    top: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .os {
+    top: 85%;
+    height: 145px;
+    line-height: 1.0;
+    transform: translate(-50%, -50%);
+  }
+
+  .veiculos:hover,
+  .pecas:hover,
+  .servico:hover,
+  .clientes:hover,
+  .mecanicos:hover,
+  .os:hover {
+    background-color: #1845ad;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+    
+    form {
+      background-color: rgba(255, 255, 255, 0.13);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+      padding: 50px 35px;
+    }
+
+    .clickable {
+      pointer-events: auto;
+    }
+
+    form * {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      outline: none;
+      border: none;
+    }
+
+    form h3 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    input {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: rgba(255,255,255,0.07);
+      border-radius: 3px;
+      padding: 0 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    ::placeholder {
+      color: #e5e5e5;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #080710;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Adicionar Peças</title>
+</head>
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="nav-side">
+    <h3 class="menudaoficina">Menu da Oficina</h3>
+    <a href="{% url 'home' %}"><button type="submit" class="veiculos">Veiculos</button></a>
+    <a href="{% url 'pecas' %}"><button type="submit" class="pecas">Peças</button></a>
+    <a href="{% url 'servicos' %}"><button type="submit" class="servico">Serviços</button></a>
+    <a href="{% url 'cliente' %}"><button type="submit" class="clientes">Clientes</button></a>
+    <a href="{% url 'mecanicos' %}"><button type="submit" class="mecanicos">Mecânicos</button></a>
+    <a href="{% url 'ordens' %}"><button type="submit" class="os">Ordens<br>de<br>Serviço</button></a>
+  </div>
+
+  <div class="clickable">
+    <form method="post" action="{% url 'addpecas' %}">
+      {% csrf_token %}
+      <h3>Adicionar Peça</h3>
+      {{ form.as_p }}
+      <button type="submit" class="add">Cadastrar Peça</button>
+    </form>
+  </div>
+
+</body>
+</html>

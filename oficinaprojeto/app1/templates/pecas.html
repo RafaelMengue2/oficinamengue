@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Peças</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet"/>
+    <style media="screen">
+      body {
+        background-color: #00041b;
+        margin: 0;
+        padding: 0;
+      }
+
+      .background {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .background .shape {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        animation: float 10s infinite alternate;
+      }
+
+      @keyframes float {
+        to {
+          transform: translateY(-50px) translateX(-10px);
+        }
+      }
+
+      .shape:nth-child(1) {
+        background: linear-gradient(#1845ad, #23a2f6);
+      }
+
+      .shape:nth-child(2) {
+        background: linear-gradient(to right, #ff512f, #f09819);
+      }
+
+      .shape:nth-child(3) {
+        background: linear-gradient(#1845ad, #23a2f6);
+      }
+
+      .shape:nth-child(4) {
+        background: linear-gradient(to right, #ff512f, #f09819);
+      }
+
+      .shape:nth-child(5) {
+        background: linear-gradient(#1845ad, #23a2f6);
+      }
+
+      .shape:nth-child(6) {
+        background: linear-gradient(to right, #ff512f, #f09819);
+      }
+
+      .nav-side {
+        background-color: rgba(255, 255, 255, 0.12999999523162842);
+        height: 95%;
+        width: 250px;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        backdrop-filter: blur(30px);
+        position: fixed;
+        top: 0; /* Added top position */
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+      .menudaoficina {
+        color: #ffffff;
+        text-align: center;
+        vertical-align: text-top;
+        font-size: 40px;
+        font-family: Poppins;
+        top: 55px;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        line-height: 40px;
+        border-style: hidden;
+        outline: none;
+      }
+
+      .veiculos,
+      .pecas,
+      .servico,
+      .clientes,
+      .mecanicos,
+      .os {
+        background-color: #23a2f6;
+        color: #fff;
+        text-align: center;
+        font-size: 26px;
+        font-family: Poppins;
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        line-height: 45px; /* Adjusted to center text vertically */
+        border-style: hidden;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .veiculos {
+        top: 30%;
+        transform: translate(-50%, -50%);
+      }
+      .pecas {
+        top: 40%;
+        transform: translate(-50%, -50%);
+      }
+      .servico {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .clientes {
+        top: 60%;
+        transform: translate(-50%, -50%);
+      }
+      .mecanicos {
+        top: 70%;
+        transform: translate(-50%, -50%);
+      }
+      .os {
+        top: 85%;
+        height: 145px;
+        line-height: 1.0;
+        transform: translate(-50%, -50%);
+      }
+
+      .veiculos:hover,
+      .pecas:hover,
+      .servico:hover,
+      .clientes:hover,
+      .mecanicos:hover,
+      .os:hover {
+        background-color: #1845ad;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+
+      .container {
+        background-color: rgba(255, 255, 255, 0.12999999523162842);
+        width: 600px;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        margin-top: 60px;
+        margin-left: 350px;
+        position: relative;
+        backdrop-filter: blur(30px);
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        pointer-events: none;
+      }
+      
+
+      .car-info {
+        width: 45%;
+        margin: 10px;
+        box-sizing: border-box;
+      }
+
+      .label {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      .car-attribute {
+        color: #23a2f6;
+      }
+
+      .container:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+      }
+
+      
+      .container-add {
+        background-color: rgba(255, 255, 255, 0.12999999523162842);
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        position: fixed;
+        margin-top: -200px;
+        left: 65%; 
+        backdrop-filter: blur(30px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        animation: fadeIn 1s ease-in-out;
+      }
+          
+        .container-add:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+          transform: scale(1.05);
+        }
+          
+          @keyframes fadeIn {
+              from {
+                  opacity: 0;
+              }
+              to {
+                  opacity: 1;
+              }
+          }
+          
+          .text-add {
+              text-align: center;
+              color: #ffffff;
+              vertical-align: text-top;
+              font-size: 20px;
+              font-family: Poppins;
+              line-height: 0px;
+              border-style: hidden;
+              outline: none;
+              margin-top: 20px;
+          }
+          
+          .fas.fa-plus {
+              font-size: 48px;
+              color: #ffffff;
+              margin-bottom: 30px;
+          }
+          
+      
+            .car-info p {
+              margin: 10px 0;
+              font-weight: bold;
+              color: #fff;
+              font-family: Poppins;
+              
+            }
+      
+            .car-info .label {
+              display: block;
+              margin-bottom: 5px;
+            }
+      
+            .car-info .car-attribute {
+              display: block;
+              font-weight: bold;
+              color: #fff;
+            }
+
+            @media only screen and (max-width: 1200px) {
+              .nav-side {
+                width: 100%;
+                left: 0;
+              }
+            
+              .veiculos,
+              .pecas,
+              .servico,
+              .clientes,
+              .mecanicos,
+              .os {
+                width: 100%;
+                left: 0;
+                transform: translateX(0);
+              }
+            
+              .container {
+                width: 100%;
+                margin-left: 0;
+              }
+            
+              .container-add {
+                width: 100%;
+                left: 0;
+                margin-top: 0;
+              }
+            }
+            
+            @media only screen and (max-width: 600px) {
+              .container,
+              .container-add {
+                width: 100%;
+                margin-left: 0;
+                left: 0;
+              }
+            
+              .container-add {
+                margin-top: 20px;
+              }
+            }
+          </style>      
+          <title>Home Page</title>
+        </head>
+        <body>
+          <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+          </div>
+      
+          <div class="nav-side">
+            <h3 class="menudaoficina">Menu da Oficina</h3>
+            <a href="{% url 'home' %}"><button type="submit" class="veiculos">Veiculos</button></a>
+            <a href="{% url 'pecas' %}"><button type="submit" class="pecas">Peças</button>
+            <a href="{% url 'servicos' %}"><button type="submit" class="servico">Serviços</button>
+            <a href="{% url 'cliente' %}"><button type="submit" class="clientes">Clientes</button>
+            <a href="{% url 'mecanicos' %}"><button type="submit" class="mecanicos">Mecânicos</button></a>
+            <a href="{% url 'ordens' %}"><button type="submit" class="os">Ordens<br>de<br>Serviço</button>
+          </div>
+      
+          <div class="container">
+            {% if pecas %}
+              {% for peca in pecas %}
+                <div class="car-info">
+                  <p>
+                    <span class="label" id="nome-label">Nome:</span>
+                    <span class="car-attribute" id="nome">{{ peca.marca }}</span>
+                    <hr>
+                  </p>
+                  <p>
+                    <span class="label" id="preco-label">Preço:</span>
+                    <span class="car-attribute" id="preco">{{ peca.preco }}</span>
+                  </p>
+                </div>
+              {% endfor %}
+            {% else %}
+              <p style="color: #fff; text-align: center; font-family: Poppins; font-size: 20px;">
+                Nada cadastrado ainda!
+              </p>
+            {% endif %}
+          </div>
+
+          <a href="{% url 'addpecas' %}" class="container-add">
+            <i class="fas fa-plus"></i>
+            <p class="text-add">Adicionar</p>
+          </a>
+          
+        </body>
+      </html>
+      
+    
+  
